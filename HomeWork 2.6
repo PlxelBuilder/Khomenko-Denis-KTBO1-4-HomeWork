@@ -1,0 +1,13 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+  int x, y, z, u, v;
+  cin>>x>>y>>z>>u>>v;
+  if(x*y<y*z && x*y<x*z){if(x*y<=u*v){cout<<"проходит"<<endl;}else{cout<<"не прошел"<<endl;}}
+  if(y*z<x*z && z*y<x*y){if(z*y<=u*v){cout<<"проходит"<<endl;}else{cout<<"не прошел"<<endl;}}
+  if(x*z<y*z && z*x<x*y){if(z*x<=u*v){cout<<"проходит"<<endl;}else{cout<<"не прошел"<<endl;}}
+  return 0;
+}
