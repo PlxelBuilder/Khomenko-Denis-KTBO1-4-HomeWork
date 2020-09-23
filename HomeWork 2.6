@@ -1,4 +1,4 @@
-#include <iostream>
+  #include <iostream>
 
 using namespace std;
 
@@ -6,8 +6,10 @@ int main()
 {
   int x, y, z, u, v;
   cin>>x>>y>>z>>u>>v;
-  if(x*y<y*z && x*y<x*z){if(x*y<=u*v){cout<<"проходит"<<endl;}else{cout<<"не прошел"<<endl;}}
-  if(y*z<x*z && z*y<x*y){if(z*y<=u*v){cout<<"проходит"<<endl;}else{cout<<"не прошел"<<endl;}}
-  if(x*z<y*z && z*x<x*y){if(z*x<=u*v){cout<<"проходит"<<endl;}else{cout<<"не прошел"<<endl;}}
+  if(x<=u||y<=u||z<=u){
+    if(x<=u&&(y<=v||z<=v)){cout<<"проходит"; return 0;}
+    if(y<=u&&(x<=v||z<=v)){cout<<"проходит"; return 0;}
+    if(z<=u&&(y<=v||x<=v)){cout<<"проходит"; return 0;}else{cout<<"не проходит"; return 0;}
+  }
   return 0;
 }
