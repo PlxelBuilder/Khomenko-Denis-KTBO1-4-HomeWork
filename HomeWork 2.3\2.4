@@ -5,13 +5,20 @@ using namespace std;
 int main()
 {
     bool exit = false;
-    int a;
+    int a, n, num = 1, sum = 0;
     
     while(exit == 0){
         cout<<"Введите число от 0 до 5"<<endl;
         cin>>a;
         if(a<0 || a>5){cout<<"Сказано же ОТ 0 ДО 5!!!"<<endl<<"Попробуй еще."<<endl;}else{exit = true;}
     }
-    
+    for(int k = 0; k<a; k++)
+    {
+      cout<<"Введите "<<num<<" число: ";
+      cin>>n;
+      sum += n;
+      num++;
+    }
+    cout<<"Сумма: "<<sum<<endl;
     return 0;
 }
